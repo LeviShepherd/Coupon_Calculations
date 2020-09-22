@@ -63,6 +63,8 @@ def calculate_price(price, cash_coupon, percent_coupon):
         total = subtotal + SHIP_30
     elif subtotal < 10:
         total = subtotal + SHIP_10
+    else:
+        print("Looks like we owe you one!")
 
     return total
 
