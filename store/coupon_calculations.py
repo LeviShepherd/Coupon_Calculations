@@ -55,7 +55,9 @@ def calculate_price(price, cash_coupon, percent_coupon):
             subtotal = ((price - CASH_10) * PERCENT_20) * TAX_RATE
 
     # Determine total
-    if subtotal <= 10:
+    if 10 <= subtotal <= 30:
+        total = subtotal + SHIP_30
+    elif subtotal < 10:
         total = subtotal + SHIP_10
 
     return total
