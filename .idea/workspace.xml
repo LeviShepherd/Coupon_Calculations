@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49df7594-acd9-4971-8c9c-d6205e0e7fe9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/test_coupon_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_coupon_calculations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/coupon_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/coupon_calculations.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
