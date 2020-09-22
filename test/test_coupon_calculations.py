@@ -68,6 +68,27 @@ class MyTestCase(unittest.TestCase):
         actual = calculate_price(45, 10, 10)
         self.assertEqual(expected, actual)
 
+    # Tests over 50
+    def test_price_over_50(self):
+        expected = 79.50
+        actual = calculate_price(75, 0, 0)
+        self.assertEqual(expected, actual)
+
+    def test_price_over_50_with_cash(self):
+        expected = 74.20
+        actual = calculate_price(75, 5, 0)
+        self.assertEqual(expected, actual)
+
+    def test_price_over_50_with_percent(self):
+        expected = 67.58
+        actual = calculate_price(75, 0, 15)
+        self.assertAlmostEqual(expected, actual, 2)
+
+    def test_price_over_50_with_both(self):
+        expected = 55.12
+        actual = calculate_price(75, 10, 20)
+        self.assertAlmostEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main()
