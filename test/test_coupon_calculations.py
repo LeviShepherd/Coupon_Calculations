@@ -26,6 +26,27 @@ class MyTestCase(unittest.TestCase):
         # Set number of places to 2 due to the small difference in rounding
         self.assertAlmostEqual(expected, actual, 2)
 
+    # Tests under 30
+    def test_price_under_30(self):
+        expected = 34.45
+        actual = calculate_price(25, 0, 0)
+        self.assertEqual(expected, actual)
+
+    def test_price_under_30_with_cash(self):
+        expected = 29.15
+        actual = calculate_price(25, 5, 0)
+        self.assertAlmostEqual(expected, actual)
+
+    def test_price_under_30_with_percent(self):
+        expected = 30.48
+        actual = calculate_price(25, 0, 15)
+        self.assertAlmostEqual(expected, actual, 2)
+
+    def test_price_under_30_with_both(self):
+        expected = 27.03
+        actual = calculate_price(25, 5, 10)
+        self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main()
